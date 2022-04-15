@@ -4,9 +4,13 @@
 {% block title %}Connexion{% endblock title %}
 
 {% block content %}
-<h1>Connectez-vous à l'application</h1>
-<form method="post">
-    {{ form|crispy }}
-    <button type="submit" class="btn btn-success">Se connecter</button>
-</form>
+<main class="container flex-grow-1 mt-4">
+    <h1>Connectez-vous à l'application</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success">Se connecter</button>
+    </form>
+</main>
+
 {% endblock content %}
