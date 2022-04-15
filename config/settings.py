@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'website',
     'website.passwords',
+    'website.users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -133,3 +134,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # https://django-crispy-forms.readthedocs.io/en/latest/
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# Custom User and auth Configuration
+AUTH_USER_MODEL = "users.User"
+LOGIN_REDIRECT = "home"
+LOGOUT_REDIRECT = "home"

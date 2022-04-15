@@ -9,6 +9,7 @@ django-crispy-forms = "*"
 crispy-bootstrap5 = "*"
 django-extensions = "*"
 python-dateutil = "*"
+django-active-link = "*"
 
 [dev-packages]
 
